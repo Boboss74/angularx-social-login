@@ -65,19 +65,19 @@ gulp.task('rollup:fesm', function () {
   return gulp.src(`${buildFolder}/**/*.js`)
   // transform the files here.
     .pipe(rollup({
+      // See https://rollupjs.org/#javascript-api
 
       // Bundle's entry point
-      // See https://github.com/rollup/rollup/wiki/JavaScript-API#entry
-      entry: `${buildFolder}/index.js`,
+      input: `${buildFolder}/index.js`,
 
       // Allow mixing of hypothetical and actual files. "Actual" files can be files
       // accessed by Rollup or produced by plugins further down the chain.
       // This prevents errors like: 'path/file' does not exist in the hypothetical file system
       // when subdirectories are used in the `src` directory.
+      // // See https://github.com/mcasimir/gulp-rollup#optionsallowrealfiles
       allowRealFiles: true,
 
       // A list of IDs of modules that should remain external to the bundle
-      // See https://github.com/rollup/rollup/wiki/JavaScript-API#external
       external: [
         '@angular/core',
         '@angular/common',
@@ -85,7 +85,6 @@ gulp.task('rollup:fesm', function () {
       ],
 
       // Format of generated bundle
-      // See https://github.com/rollup/rollup/wiki/JavaScript-API#format
       format: 'es',
       plugins: [localResolve()]
     }))
@@ -100,19 +99,19 @@ gulp.task('rollup:umd', function () {
   return gulp.src(`${buildFolder}/**/*.js`)
   // transform the files here.
     .pipe(rollup({
+      // See https://rollupjs.org/#javascript-api
 
       // Bundle's entry point
-      // See https://github.com/rollup/rollup/wiki/JavaScript-API#entry
-      entry: `${buildFolder}/index.js`,
+      input: `${buildFolder}/index.js`,
 
       // Allow mixing of hypothetical and actual files. "Actual" files can be files
       // accessed by Rollup or produced by plugins further down the chain.
       // This prevents errors like: 'path/file' does not exist in the hypothetical file system
       // when subdirectories are used in the `src` directory.
+      // See https://github.com/mcasimir/gulp-rollup#optionsallowrealfiles
       allowRealFiles: true,
 
       // A list of IDs of modules that should remain external to the bundle
-      // See https://github.com/rollup/rollup/wiki/JavaScript-API#external
       external: [
         '@angular/core',
         '@angular/common',
@@ -120,19 +119,15 @@ gulp.task('rollup:umd', function () {
       ],
 
       // Format of generated bundle
-      // See https://github.com/rollup/rollup/wiki/JavaScript-API#format
       format: 'umd',
 
       // Export mode to use
-      // See https://github.com/rollup/rollup/wiki/JavaScript-API#exports
       exports: 'named',
 
-      // The name to use for the module for UMD/IIFE bundles
-      // (required for bundles with exports)
-      // See https://github.com/rollup/rollup/wiki/JavaScript-API#modulename
-      moduleName: 'angular4-social-login',
+      // The variable name, representing your iife/umd bundle,
+      // by which other scripts on the same page can access it.
+      name: 'angular4-social-login',
 
-      // See https://github.com/rollup/rollup/wiki/JavaScript-API#globals
       globals: {
         typescript: 'ts'
       },

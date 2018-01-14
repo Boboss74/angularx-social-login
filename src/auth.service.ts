@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, Subject, ReplaySubject } from 'rxjs';
 
 import { LoginProvider } from './entities/login-provider';
 import { SocialUser } from './entities/user';
@@ -51,10 +51,10 @@ export class AuthService {
   private providers: Map<string, LoginProvider>;
 
   private _user: SocialUser = null;
-  private _authState: BehaviorSubject<SocialUser> = new BehaviorSubject(null);
+  private _authState: Subject<SocialUser> = new ReplaySubject(1);
 
   get authState(): Observable<SocialUser> {
-    return this._authState.asObservable();
+    return this._authState;
   }
 
   constructor(config: AuthServiceConfig) {
@@ -67,7 +67,7 @@ export class AuthService {
         this._user = user;
         this._authState.next(user);
       }).catch((err) => {
-        // this._authState.next(null);
+        this._authState.next(null);
       });
     });
   }
@@ -82,8 +82,14 @@ export class AuthService {
 
           this._user = user;
           this._authState.next(user);
+        }).catch(err => {
+          this._user = null;
+          this._authState.next(null);
+          reject(err);
         });
       } else {
+        this._user = null;
+        this._authState.next(null);
         reject(AuthService.ERR_LOGIN_PROVIDER_NOT_FOUND);
       }
     });
