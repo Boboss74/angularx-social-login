@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "declaration": true,
     "declarationDir": "dist",
     "rootDir": "src",
@@ -8,6 +9,11 @@
     "moduleResolution": "Node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "paths": {
+      "@angular/*": [
+        "./node_modules/@angular/*"
+      ]
+    },
     "lib": ["ES6", "DOM"],
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
