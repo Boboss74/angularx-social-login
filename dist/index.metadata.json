@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./sociallogin.module","export":["SocialLoginModule"]},{"from":"./auth.service","export":["AuthService","AuthServiceConfig","LoginOpt"]},{"from":"./entities","export":["LoginProvider","SocialUser"]},{"from":"./providers","export":["FacebookLoginProvider","GoogleLoginProvider"]}]}]

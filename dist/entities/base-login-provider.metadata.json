@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"BaseLoginProvider":{"__symbolic":"class","members":{"__ctor__":[{"__symbolic":"constructor"}],"initialize":[{"__symbolic":"method"}],"signIn":[{"__symbolic":"method"}],"signOut":[{"__symbolic":"method"}],"loadScript":[{"__symbolic":"method"}]}}}}]
