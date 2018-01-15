@@ -1,13 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var sociallogin_module_1 = require("./sociallogin.module");
-exports.SocialLoginModule = sociallogin_module_1.SocialLoginModule;
-var auth_service_1 = require("./auth.service");
-exports.AuthService = auth_service_1.AuthService;
-exports.AuthServiceConfig = auth_service_1.AuthServiceConfig;
-var entities_1 = require("./entities");
-exports.SocialUser = entities_1.SocialUser;
-var providers_1 = require("./providers");
-exports.FacebookLoginProvider = providers_1.FacebookLoginProvider;
-exports.GoogleLoginProvider = providers_1.GoogleLoginProvider;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiL2hvbWUvYm9yaXMvZGV2L2ljZXJvbGwvYW5ndWxhcngtc29jaWFsLWxvZ2luL3NyYy8iLCJzb3VyY2VzIjpbImluZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsMkRBQXlEO0FBQWhELGlEQUFBLGlCQUFpQixDQUFBO0FBQzFCLCtDQUEwRTtBQUFqRSxxQ0FBQSxXQUFXLENBQUE7QUFBRSwyQ0FBQSxpQkFBaUIsQ0FBQTtBQUN2Qyx1Q0FBdUQ7QUFBL0IsZ0NBQUEsVUFBVSxDQUFBO0FBQ2xDLHlDQUF5RTtBQUFoRSw0Q0FBQSxxQkFBcUIsQ0FBQTtBQUFFLDBDQUFBLG1CQUFtQixDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IHsgU29jaWFsTG9naW5Nb2R1bGUgfSBmcm9tICcuL3NvY2lhbGxvZ2luLm1vZHVsZSc7XG5leHBvcnQgeyBBdXRoU2VydmljZSwgQXV0aFNlcnZpY2VDb25maWcsIExvZ2luT3B0IH0gZnJvbSAnLi9hdXRoLnNlcnZpY2UnO1xuZXhwb3J0IHsgTG9naW5Qcm92aWRlciwgU29jaWFsVXNlciB9IGZyb20gJy4vZW50aXRpZXMnO1xuZXhwb3J0IHsgRmFjZWJvb2tMb2dpblByb3ZpZGVyLCBHb29nbGVMb2dpblByb3ZpZGVyIH0gZnJvbSAnLi9wcm92aWRlcnMnO1xuIl19
+export { SocialLoginModule } from './sociallogin.module';
+export { AuthService, AuthServiceConfig } from './auth.service';
+export { SocialUser } from './entities';
+export { FacebookLoginProvider, GoogleLoginProvider } from './providers';
+//# sourceMappingURL=index.js.map

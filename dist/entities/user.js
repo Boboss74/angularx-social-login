@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class SocialUser {
+export class SocialUser {
 }
-exports.SocialUser = SocialUser;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNlci5qcyIsInNvdXJjZVJvb3QiOiIvaG9tZS9ib3Jpcy9kZXYvaWNlcm9sbC9hbmd1bGFyeC1zb2NpYWwtbG9naW4vc3JjLyIsInNvdXJjZXMiOlsiZW50aXRpZXMvdXNlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBO0NBU0M7QUFURCxnQ0FTQyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjbGFzcyBTb2NpYWxVc2VyIHtcbiAgcHJvdmlkZXI6IHN0cmluZztcbiAgaWQ6IHN0cmluZztcbiAgZW1haWw6IHN0cmluZztcbiAgbmFtZTogc3RyaW5nO1xuICBwaG90b1VybDogc3RyaW5nO1xuICBmaXJzdE5hbWU6IHN0cmluZztcbiAgbGFzdE5hbWU6IHN0cmluZztcbiAgYXV0aFRva2VuOiBzdHJpbmc7XG59XG4iXX0=
+//# sourceMappingURL=user.js.map
