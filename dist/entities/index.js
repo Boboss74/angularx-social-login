@@ -1,0 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var user_1 = require("./user");
+exports.SocialUser = user_1.SocialUser;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiL2hvbWUvYm9yaXMvZGV2L2ljZXJvbGwvYW5ndWxhcngtc29jaWFsLWxvZ2luL3NyYy8iLCJzb3VyY2VzIjpbImVudGl0aWVzL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsK0JBQW9DO0FBQTNCLDRCQUFBLFVBQVUsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCB7IExvZ2luUHJvdmlkZXIgfSBmcm9tICcuL2xvZ2luLXByb3ZpZGVyJztcbmV4cG9ydCB7IFNvY2lhbFVzZXIgfSBmcm9tICcuL3VzZXInO1xuIl19

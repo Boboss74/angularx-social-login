@@ -63,7 +63,7 @@ export class GoogleLoginProvider extends BaseLoginProvider {
         user.lastName = profile.getFamilyName();
         user.authToken = token;
         resolve(user);
-      }).catch(err => reject(err));
+      }).catch((err: any) => reject(err));
     });
   }
 
