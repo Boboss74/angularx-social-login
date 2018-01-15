@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/abacritt/angular4-social-login"
+    "url": "https://github.com/Boboss74/angularx-social-login"
   },
   "author": {
     "name": "Jaibatrik Dutta",
@@ -20,12 +20,12 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abacritt/angularx-social-login/issues"
+    "url": "https://github.com/Boboss74/angularx-social-login/issues"
   },
-  "main": "angular4-social-login.umd.js",
-  "module": "angular4-social-login.js",
-  "jsnext:main": "angular4-social-login.js",
-  "typings": "angular4-social-login.d.ts",
+  "main": "angularx-social-login.umd.js",
+  "module": "angularx-social-login.js",
+  "jsnext:main": "angularx-social-login.js",
+  "typings": "angularx-social-login.d.ts",
   "peerDependencies": {
     "@angular/core": "^4.0.0",
     "rxjs": "^5.1.0",

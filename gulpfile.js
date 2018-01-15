@@ -126,7 +126,7 @@ gulp.task('rollup:umd', function () {
 
       // The variable name, representing your iife/umd bundle,
       // by which other scripts on the same page can access it.
-      name: 'angular4-social-login',
+      name: 'angularx-social-login',
 
       globals: {
         typescript: 'ts'
@@ -134,7 +134,7 @@ gulp.task('rollup:umd', function () {
       plugins: [localResolve()]
 
     }))
-    .pipe(rename('angular4-social-login.umd.js'))
+    .pipe(rename('angularx-social-login.umd.js'))
     .pipe(gulp.dest(distFolder));
 });
 
