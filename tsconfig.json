@@ -27,5 +27,11 @@
     "skipMetadataEmit": false,
     "strictMetadataEmit": false,
     "annotationsAs": "decorators"
-  }
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
 }
