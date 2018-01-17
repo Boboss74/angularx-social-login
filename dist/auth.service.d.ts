@@ -10,7 +10,6 @@ export interface LoginOpt {
      * Facebook FB.login options: https://developers.facebook.com/docs/reference/javascript/FB.login/v2.11.
      */
     auth_type?: string;
-    scope?: string;
     return_scopes?: boolean;
     enable_profile_selector?: boolean;
     profile_selector_ids?: string;
@@ -22,6 +21,8 @@ export interface LoginOpt {
     fetch_basic_profile?: boolean;
     hosted_domain?: string;
     openid_realm?: string;
+    prompt?: string;
+    scope?: string;
     ux_mode?: string;
     redirect_uri?: string;
 }
