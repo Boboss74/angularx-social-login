@@ -7,4 +7,5 @@ export declare class SocialUser {
     firstName: string;
     lastName: string;
     authToken: string;
+    tokenId: string;
 }

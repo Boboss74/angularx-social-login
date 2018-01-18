@@ -538,7 +538,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/providers/google-login-provider.ts:49</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/providers/google-login-provider.ts:54</a></div>
                                         </td>
                                     </tr>
             
@@ -575,7 +575,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/providers/google-login-provider.ts:70</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/providers/google-login-provider.ts:80</a></div>
                                         </td>
                                     </tr>
             
@@ -711,6 +711,10 @@ export class GoogleLoginProvider extends BaseLoginProvider {
                 let profile &#x3D; this.auth2.currentUser.get().getBasicProfile();
                 let token &#x3D; this.auth2.currentUser.get().getAuthResponse(true).access_token;
 
+                //This is the token that can be sended for the backend.
+                //https://developers.google.com/identity/sign-in/web/backend-auth
+                let backendToken &#x3D; this.auth2.currentUser.get().getAuthResponse(true).id_token;
+
                 user.id &#x3D; profile.getId();
                 user.name &#x3D; profile.getName();
                 user.email &#x3D; profile.getEmail();
@@ -718,6 +722,7 @@ export class GoogleLoginProvider extends BaseLoginProvider {
                 user.firstName &#x3D; profile.getGivenName();
                 user.lastName &#x3D; profile.getFamilyName();
                 user.authToken &#x3D; token;
+                user.tokenId &#x3D; backendToken;
                 resolve(user);
               } else {
                 reject();
@@ -737,6 +742,10 @@ export class GoogleLoginProvider extends BaseLoginProvider {
         let profile &#x3D; this.auth2.currentUser.get().getBasicProfile();
         let token &#x3D; this.auth2.currentUser.get().getAuthResponse(true).access_token;
 
+        //This is the token that can be sended for the backend.
+        //https://developers.google.com/identity/sign-in/web/backend-auth
+        let backendToken &#x3D; this.auth2.currentUser.get().getAuthResponse(true).id_token;
+
         user.id &#x3D; profile.getId();
         user.name &#x3D; profile.getName();
         user.email &#x3D; profile.getEmail();
@@ -744,6 +753,7 @@ export class GoogleLoginProvider extends BaseLoginProvider {
         user.firstName &#x3D; profile.getGivenName();
         user.lastName &#x3D; profile.getFamilyName();
         user.authToken &#x3D; token;
+        user.tokenId &#x3D; backendToken;
         resolve(user);
       }).catch((err: any) &#x3D;&gt; reject(err));
     });
